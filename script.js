@@ -1,19 +1,24 @@
-function calculateSalary(venda) {
+/*descomentar o 'console.log' no fim de cada função do kata
+ para ver o resultado*/
+
+function calculateSalary(salario, venda) {
   let comissao = 0;
-  if (venda < 1200) {
+  if (venda <= 1200) {
     comissao = venda * 0.03;
   } else if (venda > 1200) {
-    comissao = venda * 0.05;
+    let vendaPlus = venda - 1200;
+    comissao = (vendaPlus * 0.05)+36;
   }
-  return comissao;
+  let result = comissao + salario;
+
+  return result;
 }
-//console.log(calculateSalary(1000));
-//console.log(calculateSalary(1500))
+//console.log(calculateSalary(1500, 1000))
+//console.log(calculateSalary(1500, 1500))
 
 function cashMachine(saque, salario, vendas) {
   let salarioTotal = salario + vendas;
   let saldo = salarioTotal - saque;
-  let result = [];
   let contador = {
     200: 0,
     100: 0,
@@ -61,7 +66,8 @@ function cashMachine(saque, salario, vendas) {
    ${contador[2]} notas de R$ 2,
    Saldo Atual: R$${saldo}`;
 }
-//console.log(cashMachine(777,1000,475))
+//console.log(cashMachine(777,1200,475))
+
 function calculateStock(quantAtual, quantMax, quantMin) {
 let quantMed = (quantMax+quantMin)/2;
 if (quantAtual >= quantMed) {
@@ -71,6 +77,7 @@ else {return 'Efetuar compra'}
 }
 //console.log(calculateStock(10,12,8))
 //console.log(calculateStock(10,12,9))
+
 function calculateAge(anoNatal, anoAtual) {
 let idade = anoAtual - anoNatal;
 let idadeMeses = idade*12;
