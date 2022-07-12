@@ -1,5 +1,4 @@
-/*descomentar o 'console.log' no fim de cada função do kata
- para ver o resultado*/
+
 
 function calculateSalary(salario, venda) {
   let comissao = 0;
@@ -13,8 +12,8 @@ function calculateSalary(salario, venda) {
 
   return result;
 }
-//console.log(calculateSalary(1500, 1000))
-//console.log(calculateSalary(1500, 1500))
+console.log(calculateSalary(1500, 1000))
+console.log(calculateSalary(1500, 1500))
 
 function cashMachine(saque, salario, vendas) {
   let salarioTotal = salario + vendas;
@@ -55,18 +54,18 @@ function cashMachine(saque, salario, vendas) {
   if (saque >= 2) {
     contador[2] += parseInt(saque / 2);
     saque -= contador[2] * 2;
-  }console.log(contador)
+  }
 
   return `Notas sacadas: ${contador[200]} notas de R$ 200,
-   ${contador[200]} notas de R$ 100,
-   ${contador[100]} notas de R$ 50,
+   ${contador[100]} notas de R$ 100,
+   ${contador[50]} notas de R$ 50,
    ${contador[20]} notas de R$ 20,
    ${contador[10]} notas de R$ 10,
    ${contador[5]} notas de R$ 5,
    ${contador[2]} notas de R$ 2,
    Saldo Atual: R$${saldo}`;
 }
-//console.log(cashMachine(777,1200,475))
+console.log(cashMachine(777,1200,475))
 
 function calculateStock(quantAtual, quantMax, quantMin) {
 let quantMed = (quantMax+quantMin)/2;
@@ -75,8 +74,8 @@ if (quantAtual >= quantMed) {
 }
 else {return 'Efetuar compra'}
 }
-//console.log(calculateStock(10,12,8))
-//console.log(calculateStock(10,12,9))
+console.log(calculateStock(10,12,8))
+console.log(calculateStock(10,12,9))
 
 function calculateAge(anoNatal, anoAtual) {
 let idade = anoAtual - anoNatal;
@@ -86,7 +85,7 @@ let idadeSemanas = parseInt(idadeDias/7);
 
 return (`${idade} anos, ou ${idadeMeses} meses, ou ${idadeDias} dias ou então ${idadeSemanas} semanas`)
 }
-//console.log (calculateAge(1988,2022))
+console.log (calculateAge(1988,2022))
 let matriz = [[1,2,3,4,5],
               [6,7,8,9,10],
               [11,12,13,14,15],
@@ -100,4 +99,4 @@ for (let i =0; i < raiz.length; i++){
     }
 } return diagonal
 }
-//console.log(getDiagonal(matriz))
+console.log(getDiagonal(matriz))
